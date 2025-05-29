@@ -1,10 +1,9 @@
 <?php
 
-namespace App\Providers;
+namespace AnyCable\Laravel\Providers;
 
-use App\Broadcasting\AnyCableBroadcaster;
+use AnyCable\Laravel\Broadcasting\AnyCableBroadcaster;
 use GuzzleHttp\Client;
-use Illuminate\Broadcasting\BroadcastManager;
 use Illuminate\Support\Facades\Broadcast;
 use Illuminate\Support\ServiceProvider;
 
@@ -15,7 +14,9 @@ class AnyCableBroadcastServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->mergeConfigFrom(
+            __DIR__.'/../../config/anycable.php', 'broadcasting.connections.anycable'
+        );
     }
 
     /**
@@ -23,6 +24,10 @@ class AnyCableBroadcastServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        $this->publishes([
+            __DIR__.'/../../config/anycable.php' => config_path('broadcasting.connections.anycable'),
+        ], 'anycable-config');
+
         Broadcast::extend('anycable', function ($app, $config) {
             return new AnyCableBroadcaster(
                 new Client(),

@@ -4,8 +4,49 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cf49b16d353ddf8a4c00c1aceb5665e8",
+    "content-hash": "3beb6dc5c0d5bdf9e031b76e66227290",
     "packages": [
+        {
+            "name": "anycable/laravel-broadcaster",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "libs/anycable-laravel",
+                "reference": "fea8748c4d06a3ea9971fd4cf21aec38a449f456"
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^7.0",
+                "illuminate/broadcasting": "^8.0|^9.0|^10.0|^12.0",
+                "illuminate/support": "^8.0|^9.0|^10.0|^12.0",
+                "php": "^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "AnyCable\\Laravel\\Providers\\AnyCableBroadcastServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "AnyCable\\Laravel\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "AnyCable Team",
+                    "email": "info@anycable.io"
+                }
+            ],
+            "description": "AnyCable broadcaster for Laravel",
+            "transport-options": {
+                "relative": true
+            }
+        },
         {
             "name": "bacon/bacon-qr-code",
             "version": "v3.0.1",
@@ -10003,7 +10044,7 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,

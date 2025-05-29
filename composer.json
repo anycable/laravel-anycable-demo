@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "anycable/laravel-broadcaster": "*",
         "laravel/framework": "^12.0",
         "laravel/jetstream": "^5.3",
         "laravel/reverb": "^1.5",
@@ -69,6 +70,12 @@
             "php-http/discovery": true
         }
     },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "libs/anycable-laravel"
+        }
+    ],
     "minimum-stability": "stable",
     "prefer-stable": true
 }

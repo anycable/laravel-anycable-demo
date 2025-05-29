@@ -79,14 +79,6 @@ return [
 
         'anycable' => [
             'driver' => 'anycable',
-            'host' => env('ANYCABLE_HOST', 'localhost'),
-            'port' => env('ANYCABLE_PORT', 8080),
-            'broadcast_port' => env('ANYCABLE_BROADCAST_PORT', 8090),
-            'scheme' => env('ANYCABLE_SCHEME', 'http'),
-            'broadcast_key' => env('ANYCABLE_BROADCAST_KEY'),
-            'timeout' => env('ANYCABLE_TIMEOUT', 5),
         ],
-
     ],
-
 ];
