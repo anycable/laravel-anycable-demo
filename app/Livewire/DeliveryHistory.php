@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use Livewire\Component;
 use Livewire\Attributes\On;
 use App\Events\PackageSent;
+use App\Events\PackageSentLog;
 
 class DeliveryHistory extends Component
 {
@@ -17,6 +18,7 @@ class DeliveryHistory extends Component
     public function submitStatus()
     {
         PackageSent::dispatch(auth()->user()->name, $this->status, Carbon::now());
+        PackageSentLog::dispatch("User ".auth()->user()->name." updated status to: ".$this->status);
 
         $this->reset('status');
     }

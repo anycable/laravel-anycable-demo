@@ -13,6 +13,6 @@ window.Echo = new Echo({
     enabledTransports: ["ws", "wss"],
 });
 
-window.Echo.channel("delivery").listen("PackageSent", (e) => {
+window.Echo.channel("delivery").listen("PackageSentLog", (e) => {
     console.log(e);
 });
