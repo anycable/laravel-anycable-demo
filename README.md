@@ -36,28 +36,16 @@ Follow the steps below to install and run the project successfully:
     php artisan migrate --migrate
     ```
 
-1.  **Run the Queue via a terminal**
+1.  **Run all services (but Reverb)**
 
     ```sh
-    php artisan queue:listen
+    composer run dev
     ```
 
-1.  **Run Reverb via a terminal**
+1.  **Run Reverb**
 
     ```sh
     php artisan reverb:start --debug
-    ```
-
-1.  **Run Vite via a terminal**
-
-    ```sh
-    npm run dev
-    ```
-
-1. **Run Laravel web server**
-
-    ```sh
-    php artisan serve
     ```
 
     
@@ -69,6 +57,20 @@ pass: password
 ```
 
 Try to submit a new status and see it updated in real-time in all open tabs.
+
+## Using with AnyCable
+
+You can use AnyCable instead of Reverb. For that, run the app as follows:
+
+```sh
+BROADCAST_CONNECTION=anycable composer run dev
+```
+
+Then, launch AnyCable server (note: public mode is required for this app to work). For example:
+
+```sh
+anycable-go --public
+```
 
 ## License
 
