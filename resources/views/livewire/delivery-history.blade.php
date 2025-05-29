@@ -32,7 +32,7 @@
                         @foreach($packageStatuses as $status)
                             <tr class="h-12 border-t border-gray-100 dark:border-gray-700">
 
-                            
+
                                 <td class="whitespace-nowrap pr-4">
                                     <div class="flex items-center">
                                         <div class="text-truncate w-32"> {{ $status['deliveryPersonnel'] }}</div>
@@ -78,12 +78,12 @@
                                             @endif
                                         </div>
                                     </div>
-                                </td>   
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>
                    @else
-                    <h3> No History yet... </h3>
+                    <h3 class="text-gray-200"> No History yet... </h3>
                    @endif
                 </table>
             </div>

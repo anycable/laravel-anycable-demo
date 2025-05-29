@@ -18,20 +18,6 @@ class DeliveryHistory extends Component
     {
         PackageSent::dispatch(auth()->user()->name, $this->status, Carbon::now());
 
-        /**
-         *  Trigger Novu to fire the in-app notifications
-         */
-        novu()->triggerEvent([
-            'name' => 'laravel-in-app-notifications',
-            'payload' => [
-                'deliveryStatus' => $this->status,
-                'deliveryHandler' => auth()->user()->name
-            ],
-            'to' => [
-                'subscriberId' => auth()->user()->id,
-            ]
-        ])->toArray();
-
         $this->reset('status');
     }
 

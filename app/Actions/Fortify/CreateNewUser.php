@@ -33,13 +33,6 @@ class CreateNewUser implements CreatesNewUsers
             'password' => Hash::make($input['password']),
         ]);
 
-        // Create subscriber on Novu
-        novu()->createSubscriber([
-            'subscriberId' => $user->id,
-            'email' => $user->email,
-            'firstName' => $user->name,
-        ])->toArray();
-
         return $user;
     }
 }

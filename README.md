@@ -1,53 +1,79 @@
-# Laravel Reverb CarryOn App
+# Laravel Reverb Demo App
+
+## Prerequisites
+
+You need PHP and Composer installed. Follow the [official Laravel docs](https://laravel.com/docs/12.x/installation) or just try the following command on MacOS:
+
+```
+/bin/bash -c "$(curl -fsSL https://php.new/install/mac/8.4)"
+```
 
 ## Start the Project
 
 Follow the steps below to install and run the project successfully:
 
-1.  **Copy the `.env.example` file to `.env`**
+1.  **Install all PHP dependencies**
 
-    ```bash
-    cp .env.example .env
-    ```
-
-2.  **Generate a key for your project**
-
-    ```bash
-    php artisan key:generate
-    ```
-
-3.  **Install all PHP dependencies**
-
-    ```bash
+    ```sh
     composer install
     ```
 
-4.  **Install all JavaScript dependencies**
+1.  **Generate a key for your project**
 
-    ```bash
+    ```sh
+    php artisan key:generate
+    ```
+
+1.  **Install all JavaScript dependencies**
+
+    ```sh
     npm install
     ```
 
-5.  **Run migrations**
+1.  **Run migrations**
 
-    ```bash
-    php artisan migrate
+    ```sh
+    php artisan migrate --migrate
     ```
 
-6.  **Run the Queue via a terminal**
+1.  **Run the Queue via a terminal**
 
-        ```
-        php artisan queue:listen
-        ```
-
-7.  **Run Reverb via a terminal**
-
+    ```sh
+    php artisan queue:listen
     ```
+
+1.  **Run Reverb via a terminal**
+
+    ```sh
     php artisan reverb:start --debug
     ```
 
-8.  **Run Vite via a terminal**
+1.  **Run Vite via a terminal**
 
-    ```
+    ```sh
     npm run dev
     ```
+
+1. **Run Laravel web server**
+
+    ```sh
+    php artisan serve
+    ```
+
+    
+Go to [localhost:8000/dashboard](http://localhost:8000/dashboard) and log in using the following credentials:
+
+```
+user: test@example.com
+pass: password
+```
+
+Try to submit a new status and see it updated in real-time in all open tabs.
+
+## License
+
+MIT.
+
+## Acknowledgements
+
+Based on this demo: https://github.com/novuhq/laravel-reverb-app
