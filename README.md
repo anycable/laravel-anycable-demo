@@ -1,4 +1,6 @@
-# Laravel Reverb Demo App
+# Laravel AnyCable Demo
+
+This is a minimal Laravel application that demonstrates how to use AnyCable as a broadcasting and Echo backend.
 
 ## Prerequisites
 
@@ -36,18 +38,11 @@ Follow the steps below to install and run the project successfully:
     php artisan migrate --migrate
     ```
 
-1.  **Run all services (but Reverb)**
+1.  **Run all services** (that would download and run AnyCable server as well)
 
     ```sh
     composer run dev
     ```
-
-1.  **Run Reverb**
-
-    ```sh
-    php artisan reverb:start --debug
-    ```
-
     
 Go to [localhost:8000/dashboard](http://localhost:8000/dashboard) and log in using the following credentials:
 
@@ -58,19 +53,13 @@ pass: password
 
 Try to submit a new status and see it updated in real-time in all open tabs.
 
-## Using with AnyCable
+### Using with Reverb
 
-You can use AnyCable instead of Reverb. For that, run the app as follows:
+You can also run this project with the default Laravel Reverb WebSocket server without any code changes. Just update your configuration as follows:
 
-```sh
-BROADCAST_CONNECTION=anycable composer run dev
-```
+- Set `BROADCAST_CONNECTION=reverb` in the `.env`
 
-Then, launch AnyCable server (note: public mode is required for this app to work). For example:
-
-```sh
-anycable-go --public
-```
+- Replace `php artisan anycable:server` with `php artisan reverb:start` in the process list of the `dev` command in the `composer.json` file.
 
 ## License
 

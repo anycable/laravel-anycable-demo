@@ -4,21 +4,33 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3beb6dc5c0d5bdf9e031b76e66227290",
+    "content-hash": "8d1977a424cac6076ba04cf4a6fe87d9",
     "packages": [
         {
             "name": "anycable/laravel-broadcaster",
-            "version": "dev-main",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/anycable/anycable-laravel.git",
+                "reference": "31bde4ab6933d495ca796432495115c27be00f10"
+            },
             "dist": {
-                "type": "path",
-                "url": "libs/anycable-laravel",
-                "reference": "fea8748c4d06a3ea9971fd4cf21aec38a449f456"
+                "type": "zip",
+                "url": "https://api.github.com/repos/anycable/anycable-laravel/zipball/31bde4ab6933d495ca796432495115c27be00f10",
+                "reference": "31bde4ab6933d495ca796432495115c27be00f10",
+                "shasum": ""
             },
             "require": {
                 "guzzlehttp/guzzle": "^7.0",
-                "illuminate/broadcasting": "^8.0|^9.0|^10.0|^12.0",
-                "illuminate/support": "^8.0|^9.0|^10.0|^12.0",
+                "laravel/framework": "^11.0|^12.0",
                 "php": "^8.0"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.13",
+                "mockery/mockery": "^1.4",
+                "orchestra/testbench": "^9.0|^10.3",
+                "phpunit/phpunit": "^11.0",
+                "squizlabs/php_codesniffer": "^3.7"
             },
             "type": "library",
             "extra": {
@@ -33,19 +45,22 @@
                     "AnyCable\\Laravel\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "authors": [
                 {
-                    "name": "AnyCable Team",
-                    "email": "info@anycable.io"
+                    "name": "Vladimir Dementyev",
+                    "email": "dementiev.vm@gmail.com"
                 }
             ],
             "description": "AnyCable broadcaster for Laravel",
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/anycable/anycable-laravel/issues",
+                "source": "https://github.com/anycable/anycable-laravel/tree/v0.1.0"
+            },
+            "time": "2025-05-30T17:36:56+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -10044,7 +10059,7 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
