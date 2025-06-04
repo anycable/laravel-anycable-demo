@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8d1977a424cac6076ba04cf4a6fe87d9",
+    "content-hash": "976a0240ccc19282cece6bfe7ad28793",
     "packages": [
         {
             "name": "anycable/laravel-broadcaster",
-            "version": "v0.1.0",
+            "version": "v0.1.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/anycable/anycable-laravel.git",
-                "reference": "31bde4ab6933d495ca796432495115c27be00f10"
+                "url": "https://github.com/anycable/anycable-laravel",
+                "reference": "9d16f2d153d691c710dcb51ea5bb087bc9809b49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/anycable/anycable-laravel/zipball/31bde4ab6933d495ca796432495115c27be00f10",
-                "reference": "31bde4ab6933d495ca796432495115c27be00f10",
+                "url": "https://api.github.com/repos/anycable/anycable-laravel/zipball/9d16f2d153d691c710dcb51ea5bb087bc9809b49",
+                "reference": "9d16f2d153d691c710dcb51ea5bb087bc9809b49",
                 "shasum": ""
             },
             "require": {
@@ -56,11 +56,7 @@
                 }
             ],
             "description": "AnyCable broadcaster for Laravel",
-            "support": {
-                "issues": "https://github.com/anycable/anycable-laravel/issues",
-                "source": "https://github.com/anycable/anycable-laravel/tree/v0.1.0"
-            },
-            "time": "2025-05-30T17:36:56+00:00"
+            "time": "2025-06-04T04:53:16+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",

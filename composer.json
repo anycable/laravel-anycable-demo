@@ -6,7 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "anycable/laravel-broadcaster": "^0.1.0",
+        "anycable/laravel-broadcaster": "^0.1.1",
         "laravel/framework": "^12.0",
         "laravel/jetstream": "^5.3",
         "laravel/reverb": "^1.5",
